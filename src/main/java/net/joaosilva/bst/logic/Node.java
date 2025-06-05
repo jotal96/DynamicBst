@@ -70,6 +70,11 @@ public class Node<T> implements INode<T>{
         this.right = right;
     }
 
+    /**
+     * Solution taken from
+     * https://stackoverflow.com/a/42449385
+     *
+     */
     public void printTree(Node<T> node, String prefix, boolean isLeft) {
         if (node != null) {
             printTree(node.right, prefix + (isLeft ? "│   " : "    "), false);
